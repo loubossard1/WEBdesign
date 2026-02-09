@@ -1,0 +1,343 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#map-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /**/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /**/
+    cursor: grab;
+}
+
+#map-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+#map{
+    width: 3000px;
+    height: 3000px;
+    /**/
+    position: relative;
+    /**/
+}
+
+#carte{
+    width: 100px;
+    height: 100px
+}
+
+.diamond{
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 70px solid rgb(248, 135, 188);
+    position: absolute;
+    top: -50px;
+  }
+  .diamond:after{
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid rgb(248, 135, 188);
+  }
+  #diamond1{
+    top: 45%;
+    left: 58%;
+}
+#diamond2{
+    top: 24%;
+    left: 85%;
+}
+#diamond3{
+    top: 61%;
+    left: 73%;
+}
+#diamond4{
+    top: 42%;
+    left: 118%;
+}
+#diamond5{
+    top: 73%;
+    left: 45%;
+}
+#diamond6{
+    top: 69%;
+    left: 100%;
+}
+#diamond7{
+    top: 73%;
+    left: 122%;
+}
+#diamond8{
+    top: 75%;
+    left: 126%;
+}
+#diamond9{
+    top: 80%;
+    left: 125%;
+}
+#diamond10{
+    top: 79%;
+    left: 46%;
+}
+#diamond11{
+    top: 66%;
+    left: 25%;
+}
+#diamond12{
+    top: 49%;
+    left: 120%;
+}
+#diamond13{
+    top: 64%;
+    left: 43%;
+}
+#diamond14{
+    top: 82%;
+    left: 59%;
+}
+
+
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(255, 230, 0);
+    text-align: center;
+  }
+
+  #triangle1{
+    top: 60%;
+    left: 55%;
+}
+#triangle2{
+    top: 46%;
+    left: 75%;
+}
+#triangle3{
+    top: 47%;
+    left: 72%;
+}
+#triangle4{
+    top: 57%;
+    left: 76%;
+}
+#triangle5{
+    top: 90%;
+    left: 91%;
+}
+#triangle6{
+    top: 74%;
+    left: 127%;
+}
+#triangle7{
+    top: 72%;
+    left: 124%;
+}
+#triangle8{
+    top: 71%;
+    left: 123%;
+}
+#triangle9{
+    top: 90%;
+    left: 130%;
+}
+#triangle10{
+    top: 85%;
+    left: 38%;
+}
+
+
+.circle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: crimson;
+    border-radius: 50%;
+    text-align: center;
+  }
+  #circle1{
+    top: 45%;
+    left: 75%;
+}
+#circle2{
+    top: 42%;
+    left: 77%;
+}
+#circle3{
+    top: 54%;
+    left: 76%;
+}
+#circle4{
+    top: 63%;
+    left: 76%;
+}
+#circle5{
+    top: 61%;
+    left: 76%;
+}
+#circle6{
+    top: 84%;
+    left: 148%;
+}
+#circle7{
+    top: 67%;
+    left: 126%;
+}
+
+
+.elem{
+    position: absolute;
+    /**/
+    width: 50px;
+    height: 50px;
+    /**/
+    background-color: rgb(255, 102, 0);
+    text-align: center;
+}
+#elem1{
+    top: 51%;
+    left: 88%;
+}
+#elem2{
+    top: 70%;
+    left: 91%;
+}
+#elem3{
+    top: 70%;
+    left: 53%;
+}
+#elem4{
+    top: 72%;
+    left: 104%;
+}
+#elem5{
+    top: 70%;
+    left: 112%;
+}
+#elem6{
+    top: 80%;
+    left: 112%;
+}
+#elem7{
+    top: 98%;
+    left: 112%;
+}
+#elem8{
+    top: 80%;
+    left: 139%;
+}
+#elem9{
+    top: 100%;
+    left: 106%;
+}
+#elem10{
+    top: 83%;
+    left: 143%;
+}
+#elem11{
+    top: 69%;
+    left: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+#image-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 90%; 
+    max-height: 80%; 
+    display: none; 
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+#image-container.fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#image-container .description {
+    font-size: 2rem;
+    color: #ddd;
+    text-align: center;
+    margin-top: 10px;
+ font-family: "Combat";
+ font-weight: lighter;
+
+
+
+
+
+
+
+
+
+
+    
+}
+
